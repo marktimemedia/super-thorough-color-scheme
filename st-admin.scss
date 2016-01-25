@@ -1,0 +1,68 @@
+// Default Pink Color Scheme
+// Does not affect the colors shown in User Profile color selector (st-admin-color-scheme.php on line 39)
+// Additional variables found in admin/_variables.scss
+
+// Generic neutral color
+$neutral-color: #474247;
+
+// Admin Menu main background color
+$base-color: $neutral-color;
+
+// Admin Menu main highlight color
+$highlight-color: #de1e7e;
+
+// Admin menu default text color
+$text-color: #fff;
+
+// Admin menu default icon color
+$icon-color: $text-color;
+
+
+
+// Global Action and notification items (by default based off the highlight color)
+$notification-color: lighten($highlight-color, 10%);
+$action-color: darken($highlight-color, 2%);
+
+// Global Link colors (by default based off the highlight color)
+$link: $highlight-color;
+
+// Global Focus highlight color (by default based off the highlight color)
+$link-focus: lighten( $link, 20% );
+
+// Global Button color (by default based off the action color)
+$button-color: $action-color;
+
+// Global Error Color (usually red)
+$error-color: #ff0066;
+
+
+
+// Primary Admin menu selected text color
+$current-text-color: $text-color;
+
+// Primary Admin menu hover color
+$menu-highlight-text: $link-focus;
+
+// Primary Admin menu hover background (by default based off base color)
+$menu-highlight-background: darken($base-color, 5%);
+
+// Admin Submenu highlighted text color (by default based off highlight color)
+$menu-submenu-focus-text: lighten($highlight-color, 18%);
+
+// Admin Submenu background (by default based off base color)
+$menu-submenu-background: darken( $base-color, 9% );
+
+
+
+// Body background color (by default based off base color)
+$body-background: lighten($base-color, 65%);
+
+// Body text color (by default based off neutral color)
+$body-text: darken($neutral-color, 15%);
+
+// Metaboxes
+$body-metabox: lighten($body-background, 20%);
+$body-metabox-border: darken($body-metabox, 8%);
+
+
+@import "admin/admin";
