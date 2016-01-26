@@ -12,7 +12,7 @@ $base-color: $neutral-color;
 $highlight-color: #bada55;
 
 // Admin menu default text color
-$text-color: $highlight-color;
+$text-color: #bada55;
 
 // Primary admin menu highlighted text color
 $current-text-color: $neutral-color;
@@ -65,6 +65,7 @@ $body-background: lighten($base-color, 10%);
 
 // Body text color (by default based off neutral color)
 $body-text: lighten($neutral-color, 75%);
+$body-secondary-text: darken($body-text, 20%);
 
 // Metaboxes
 $body-metabox: lighten($body-background, 5%);

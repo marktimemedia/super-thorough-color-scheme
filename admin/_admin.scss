@@ -20,6 +20,10 @@ html {
 
 	p {
 		color: $body-text;
+
+		.description {
+			color: $body-secondary-text;
+		}
 	}
 
 	td, th, .widefat td, .widefat th, .misc-pub-section, .tablenav-pages {
@@ -60,9 +64,7 @@ div.dashboard-widget-submit input:hover,
 	color: $link-focus !important;
 }
 
-.wrap .add-new-h2:hover, .wrap .page-title-action:hover {
-	background-color: $highlight-color;
-}
+
 
 #wpadminbar .ab-top-menu>li.hover>.ab-item, #wpadminbar.nojq .quicklinks .ab-top-menu>li>.ab-item:focus, #wpadminbar:not(.mobile) .ab-top-menu>li:hover>.ab-item, #wpadminbar:not(.mobile) .ab-top-menu>li>.ab-item:focus, #wpadminbar:not(.mobile)>#wp-toolbar a:focus span.ab-label, #wpadminbar:not(.mobile)>#wp-toolbar li:hover span.ab-label, #wpadminbar>#wp-toolbar li.hover span.ab-label, .wp-responsive-open #wpadminbar #wp-admin-bar-menu-toggle .ab-icon:before,  {
 	color: $link-focus;
@@ -197,8 +199,14 @@ a:focus, a:focus .media-icon img, input[type=text]:focus, input[type=password]:f
 
 .wrap .add-new-h2, .wrap .add-new-h2:active, .wrap .page-title-action, .wrap .page-title-action:active {
 	background-color: lighten($body-background, 5%);
-	border: 1px solid darken($body-background, 5%);
+	border: 1px solid $body-metabox-border;
+
+	&:hover {
+		background-color: $highlight-color;
+		color: $menu-current-text;
+	}
 }
+
 
 #all-plugins-table .plugins a.delete, #media-items a.delete, #media-items a.delete-permanently, #nav-menu-footer .menu-delete, #search-plugins-table .plugins a.delete, .plugins a.delete, .row-actions span.delete a, .row-actions span.spam a, .row-actions span.trash a, .submitbox .submitdelete {
 	color: $error-color
@@ -211,7 +219,6 @@ a:focus, a:focus .media-icon img, input[type=text]:focus, input[type=password]:f
 
 /* List tables */
 
-.wrap .add-new-h2:hover,
 #add-new-comment a:hover,
 .tablenav .tablenav-pages a:hover,
 .tablenav .tablenav-pages a:focus {
@@ -246,13 +253,61 @@ strong .post-com-count span {
 	background: lighten($body-background, 8%);
 }
 
+.menu-item-handle, .widget .widget-top {
+	background: $body-metabox;
+	border-color: $body-metabox-border;
+}
+
+.widgets-holder-wrap {
+	.description {
+		color: $body-secondary-text;
+	}
+
+	.widget-inside {
+		background: $body-metabox;
+	}
+}
+
+.widgets-chooser {
+
+	border-color: $body-metabox-border;
+
+	li {
+		border-color: $body-metabox-border;
+		background: $body-metabox;
+		color: $body-text;
+
+		&:hover {
+			background-color: $highlight-color;
+		}
+
+		&:before, &:focus:before {
+			color: $body-text;
+		}
+
+	}
+
+	li.widgets-chooser-selected {
+		background: $highlight-color;
+		color: $menu-current-text;
+		
+		&:before, &:focus:before {
+			color: $menu-current-text;
+		}
+	}
+}
+
+#available-widgets .widget-top:hover, #widgets-left .widget-in-question .widget-top, #widgets-left .widget-top:hover, .widgets-chooser ul, div#widgets-right .widget-top:hover {
+	border-color: $link-focus;
+}
+
 #menu-management .menu-edit, #menu-settings-column .accordion-container, .comment-ays, .feature-filter, .imgedit-group, .manage-menus, .menu-item-handle, .popular-tags, .stuffbox, .widget-inside, .widget-top, .widgets-holder-wrap, .wp-editor-container, p.popular-tags, table.widefat {
 	border: 1px solid $body-metabox-border;
 }
 
 .plugins {
 	tr, th, td {
-		background-color:lighten($body-background, 2%);
+		background-color:$body-metabox;
 		border-color: $body-metabox-border;
 	}
 
@@ -343,6 +398,9 @@ strong .post-com-count span {
 		background: $body-metabox;
 		color: $body-text;
 		border-color: $body-metabox-border;
+	}
+
+	.tmce-active .switch-tmce {
 		border-bottom-color: $body-metabox;
 	}
 
@@ -365,13 +423,13 @@ strong .post-com-count span {
 
 .wp-tab-active, ul.add-menu-item-tabs li.tabs, ul.category-tabs li.tabs {
 	border: 1px solid $body-metabox-border;
-    border-bottom-color: $button-secondary-fill;
-    background-color: $button-secondary-fill;
+    border-bottom-color: $body-metabox;
+    background-color: $body-metabox;
  }
 
  .categorydiv div.tabs-panel, .customlinkdiv div.tabs-panel, .posttypediv div.tabs-panel, .taxonomydiv div.tabs-panel, .wp-tab-panel {
  	border-color: $body-metabox-border;
- 	background-color: $button-secondary-fill;
+ 	background-color: $body-metabox;
  	li {
  		color: $body-text;
  	} 
@@ -384,6 +442,16 @@ strong .post-com-count span {
  #poststuff .inside .the-tagcloud {
  	border-color: $body-metabox-border;
  	background: $button-secondary-fill;
+ }
+
+ #future-posts, #published-posts {
+ 	ul span {
+ 		color: $body-secondary-text;
+ 	}
+ }
+
+ #misc-publishing-actions .misc-pub-section {
+ 	border-bottom-color: $body-metabox-border;
  }
 
 
@@ -769,7 +837,7 @@ ul#adminmenu > li.current > a.current:after {
 		color: $body-text;
 
 		.filename {
-			color: lighten($body-text, 5%);
+			color: $body-secondary-text;
 		}
 
 		.details, .settings {
@@ -883,6 +951,12 @@ ul#adminmenu > li.current > a.current:after {
 	border-color: $body-metabox-border;
 }
 
+.theme-overlay {
+	.theme-version, .theme-author {
+		color: $body-secondary-text;
+	}
+}
+
 /* Plugins */
 
 body.about-php #TB_closeWindowButton:focus, body.about-php #TB_closeWindowButton:focus .tb-close-icon, body.about-php .tb-close-icon:focus, body.about-php .tb-close-icon:hover, body.import-php #TB_closeWindowButton:focus, body.import-php #TB_closeWindowButton:focus .tb-close-icon, body.import-php .tb-close-icon:focus, body.import-php .tb-close-icon:hover, body.index-php #TB_closeWindowButton:focus, body.index-php #TB_closeWindowButton:focus .tb-close-icon, body.index-php .tb-close-icon:focus, body.index-php .tb-close-icon:hover, body.plugin-install-php #TB_closeWindowButton:focus, body.plugin-install-php #TB_closeWindowButton:focus .tb-close-icon, body.plugin-install-php .tb-close-icon:focus, body.plugin-install-php .tb-close-icon:hover, body.plugins-php #TB_closeWindowButton:focus, body.plugins-php #TB_closeWindowButton:focus .tb-close-icon, body.plugins-php .tb-close-icon:focus, body.plugins-php .tb-close-icon:hover, body.update-core-php #TB_closeWindowButton:focus, body.update-core-php #TB_closeWindowButton:focus .tb-close-icon, body.update-core-php .tb-close-icon:focus, body.update-core-php .tb-close-icon:hover {
@@ -961,3 +1035,28 @@ div#wp-responsive-toggle a:before {
 		@include button( $button-color );
 	}
 }
+
+.acf-settings-wrap {
+	.acf-box {
+		background: $body-metabox;
+		border-color: $body-metabox-border;
+
+		.title {
+			background: $body-metabox;
+			border-color: $body-metabox-border;
+		}
+	}
+}
+
+#acf-field-group-options, #acf-field-group-locations {
+	.acf-fields{
+		& > .acf-field {
+			border-color: $body-metabox-border;
+		}
+		&.-left > .acf-field:before {
+			background: $body-metabox;
+			border-color: $body-metabox-border;
+		}
+	}
+}
+
