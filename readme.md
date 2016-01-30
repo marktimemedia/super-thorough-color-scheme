@@ -1,5 +1,5 @@
 #Super Thorough Admin Color Scheme 
-A super-thorough admin color scheme, which happens to be pink. Works as-is without any coding, or great for developers to use as a plugin template!
+A super-thorough admin color scheme, which happens to be pink. Works as-is without any coding, or great for developers to use to build their own stylesheets!
 
 ###Description
 
@@ -24,6 +24,12 @@ This is how your admin will look as soon as you activate it and select the color
 This is an example of using admin-color.scss to create a dark color scheme via theme override (the demo css file is included in your resources folder as an example, but additional color schemes are a developer tool, NOT an options interface)
 
 ###Changelog
+
+= 1.1.2 =
+* More style coverage for widget and menu editors
+* Tweaked color balance between different elements
+* Reorganize sass files to be somewhat more cohesive
+* Update dark theme example
 
 = 1.1.1 =
 * More style coverage for media library, media modals, media editor, plugins page, and error color

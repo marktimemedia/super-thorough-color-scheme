@@ -12,7 +12,7 @@ $base-color: $neutral-color;
 $highlight-color: #bada55;
 
 // Admin menu default text color
-$text-color: #bada55;
+$text-color: #aaa;
 
 // Primary admin menu highlighted text color
 $current-text-color: $neutral-color;
@@ -55,7 +55,7 @@ $menu-highlight-background: lighten($base-color, 10%);
 $menu-submenu-focus-text: lighten($highlight-color, 18%);
 
 // Admin Submenu background (by default based off base color)
-$menu-submenu-background: darken( $highlight-color, 51% );
+$menu-submenu-background: darken( $highlight-color, 55% );
 
 
 

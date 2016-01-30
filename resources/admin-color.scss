@@ -59,11 +59,11 @@ $body-background: lighten($base-color, 65%);
 
 // Body text color (by default based off neutral color)
 $body-text: darken($neutral-color, 15%);
-$body-secondary-text: lighten($body-text, 20%);
+$body-secondary-text: lighten($body-text, 40%);
 
 // Metaboxes
 $body-metabox: lighten($body-background, 20%);
-$body-metabox-border: darken($body-metabox, 5%);
+$body-metabox-border: darken($body-metabox, 12%);
 
 
 @import "../../plugins/st-admin-color-scheme/admin/admin";

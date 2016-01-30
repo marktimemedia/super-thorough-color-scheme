@@ -4,7 +4,7 @@ Plugin Name: Super Thorough Admin Color Scheme
 Description: A super-thorough admin color scheme, which happens to be pink.
 Author: Marktime Media
 Author URI: http://marktimemedia.com
-Version:1.1.1
+Version:1.1.2
 License: GPLv2
  
  This program is free software; you can redistribute it and/or modify

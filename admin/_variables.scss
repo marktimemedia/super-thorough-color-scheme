@@ -65,7 +65,7 @@ $menu-collapse-focus-icon: $menu-highlight-icon !default;
 $adminbar-avatar-frame: lighten( $menu-background, 7% ) !default;
 $adminbar-input-background: lighten( $menu-background, 7% ) !default;
 
-$button-secondary-border: lighten( $neutral-color, 60% );
+$button-secondary-border: $body-metabox-border;
 $button-secondary-fill: lighten( $body-background, 4% );
 
 $menu-customizer-text: mix( $base-color, $text-color, 40% ) !default;
